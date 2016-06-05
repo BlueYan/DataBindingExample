@@ -7,19 +7,17 @@ import com.databinding.activity.BR;
 
 /**
  * Author Yan.
- * Date 16/5/31.
- * 如果要能被View绑定，需要在get方法上添加@Bindable标注，同时在set方法中要调用notifyPropertyChanged(BR.title)方法通知View更新。
- * 模型类需要继承BaseObservable
+ * Date 16/6/4.
  */
-public class Girl extends BaseObservable{
+public class Star extends BaseObservable {
 
 
     /**
-     * ctime : 2016-03-06 14:11
-     * title : Beautyleg &#8211; Arvi 私房美腿写真
-     * description : 美女图片
-     * picUrl : http://m.xxxiao.com/wp-content/uploads/sites/3/2015/05/m.xxxiao.com_e7e731faf790487ccaf90d11774fae6b-760x500.jpg
-     * url : http://m.xxxiao.com/1353
+     * ctime : 2016-06-03 06:59
+     * title : 刘恺威送机态度转变 轻扶杨幂背脊全程帮拎包
+     * description : 腾讯明星
+     * picUrl : http://img1.gtimg.com/16/1633/163301/16330171_small.jpg
+     * url : http://ent.qq.com/a/20160603/007842.htm
      */
 
     private String ctime;
@@ -28,20 +26,22 @@ public class Girl extends BaseObservable{
     private String picUrl;
     private String url;
 
-    public Girl(String ctime, String url, String picUrl, String description, String title) {
+    public Star(String ctime, String title, String description, String picUrl, String url) {
         this.ctime = ctime;
-        this.url = url;
-        this.picUrl = picUrl;
-        this.description = description;
         this.title = title;
+        this.description = description;
+        this.picUrl = picUrl;
+        this.url = url;
     }
 
+    @Bindable
     public String getCtime() {
         return ctime;
     }
 
     public void setCtime(String ctime) {
         this.ctime = ctime;
+        notifyPropertyChanged(BR.ctime);
     }
 
     @Bindable
@@ -54,12 +54,15 @@ public class Girl extends BaseObservable{
         notifyPropertyChanged(BR.title);
     }
 
+    @Bindable
     public String getDescription() {
         return description;
     }
 
+    @Bindable
     public void setDescription(String description) {
         this.description = description;
+        notifyPropertyChanged(BR.description);
     }
 
     public String getPicUrl() {

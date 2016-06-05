@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/id_mItem_Girl"
+            android:title="女孩"
+            android:icon="@drawable/ic_girl_32px"/>
+
+        <item android:id="@+id/id_mItem_Star"
+            android:title="明星"
+            android:icon="@drawable/ic_new_32px"/>
+
+    </group>
+
+</menu>

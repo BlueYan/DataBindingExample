@@ -6,6 +6,6 @@ package com.databinding.base;
  */
 public class Constant {
 
-    private static final String API_KEY = "797f890af64d6a3cdbbbc84ebe216b45";
+    public static final String API_KEY = "797f890af64d6a3cdbbbc84ebe216b45";
 
 }

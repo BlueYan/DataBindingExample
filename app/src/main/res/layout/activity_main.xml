@@ -20,6 +20,7 @@
         tools:openDrawer="start">
 
         <FrameLayout
+            android:id="@+id/id_flContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".MainActivity" />
@@ -30,7 +31,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:fitsSystemWindows="true" />
+            android:fitsSystemWindows="true"
+            app:menu="@menu/layout_menu"
+            />
 
 
     </android.support.v4.widget.DrawerLayout>
